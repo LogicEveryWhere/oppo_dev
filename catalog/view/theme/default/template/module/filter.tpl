@@ -90,10 +90,10 @@
 								$( "#price" ).val( "<?php echo $currency_symbol_left; ?>" + ui.values[ 0 ].toFixed(<?php echo $count_symbols; ?>) + "<?php echo $currency_symbol_right; ?> - <?php echo $currency_symbol_left; ?>" + ui.values[ 1 ].toFixed(<?php echo $count_symbols; ?>) + "<?php echo $currency_symbol_right; ?>" );
 							},
 							change: function( event, ui ) {
-								/*var href = '<?php echo htmlspecialchars_decode($filter['filters'][0]['href']); ?>';
+								var href = '<?php echo htmlspecialchars_decode($filter['filters'][0]['href']); ?>';
 								var exp = /p:[\d\.,]+/g;
 								href = href.replace(exp, "p:" + ui.values[ 0 ] + "," + ui.values[ 1 ]);
-								location = href;*/
+								location = href;
 								$( "#price" ).attr("data-value", ui.values[ 0 ] + "," + ui.values[ 1 ]);
 							}
 						});
@@ -131,6 +131,7 @@
 			filter += index + ':' + val + ';';
 		});
 		filter = filter.substr(0, filter.length - 1);
+		alert(filter);
 		setUrl(filter);
 	});
 	
