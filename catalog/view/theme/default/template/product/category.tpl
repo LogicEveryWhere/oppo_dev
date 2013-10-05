@@ -97,7 +97,9 @@
     <?php } ?>
   </div>
   <div class="pagination"><?php echo $pagination; ?></div>
-  <?php } ?>
+  <?php }else{
+  	echo '<div class="content">'.$text_filter_empty.'</div>';
+  } ?>
   <?php if (!$categories && !$products) { ?>
   <div class="content"><?php echo $text_empty; ?></div>
   <div class="buttons">

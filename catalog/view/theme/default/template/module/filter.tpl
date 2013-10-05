@@ -3,7 +3,8 @@
 <div class="box">
 	<div class="box-heading"><?php echo $heading_title; ?></div>
 	<div class="box-content">
-	<?php foreach ($filters as $filter) { ?>
+	<?php
+	 foreach ($filters as $filter) { ?>
 		<?php if (isset($filter['filters'])) { ?>
             <?php if ($filter['style_id'] == 'list') { ?>
                 <div class="filter-item filter-item-list">
@@ -131,7 +132,6 @@
 			filter += index + ':' + val + ';';
 		});
 		filter = filter.substr(0, filter.length - 1);
-		alert(filter);
 		setUrl(filter);
 	});
 	
